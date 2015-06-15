@@ -1,6 +1,7 @@
 ## DVDWorm
-持ってるDVDを管理できます。DVD用に作っただけで、本でもなんでもいいです。
- 
+持ってるDVDを管理できます。DVD用に作っただけで、本でもなんでもいいです。  
+DEMO http://dvdworm.shiopon.net/
+
 ### テーブル
 dvds(id INT(11), title VARCHAR(45), title_kana VARCHAR(45), category_id INT(11), created_at TIMESTAMP)  
 categories(id INT(11), category VARCHAR(15))  

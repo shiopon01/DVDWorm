@@ -1,0 +1,32 @@
+<%= @title %> <br/>
+<form action="/add" method="post">
+    タイトル: <input type="text" name="title" maxlength="45" size="50"/><br/>
+    読みかた: <input type="text" name="title" maxlength="45" size="50"/><br/>
+    ジャンル: <select name="blood">
+        <% @categories.each do |category| %>
+            <option value="<%= category.id %><"><%= category.category %></option>
+        <% end %>
+    </select><br/>
+    出演者1: <select name="actor1">
+        <option value="0"></option>
+        <% @actors.each do |actor| %>
+        <option value="<%= actor.id %><"><%= actor.name %>(<%= actor.name_kana %>)</option>
+        <% end %>
+    </select><br/>
+
+    出演者2: <select name="actor2">
+        <option value="0"></option>
+        <% @actors.each do |actor| %>
+            <option value="<%= actor.id %><"><%= actor.name %>(<%= actor.name_kana %>)</option>
+        <% end %>
+    </select><br/>
+
+    出演者3: <select name="actor3">
+        <option value="0"></option>
+        <% @actors.each do |actor| %>
+            <option value="<%= actor.id %><"><%= actor.name %>(<%= actor.name_kana %>)</option>
+        <% end %>
+    </select><br/>
+
+    <input type="submit" value="送信"/>
+</form>
